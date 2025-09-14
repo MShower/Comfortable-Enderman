@@ -40,7 +40,7 @@ public abstract class ComfortableEndermanMixin {
         int k = MathHelper.floor(enderman.getZ() - 2.0 + random.nextDouble() * 4.0);
         BlockPos pos = new BlockPos(i, j, k);
         BlockState state = world.getBlockState(pos);
-        
+
         if (state.isIn(net.minecraft.registry.tag.BlockTags.ENDERMAN_HOLDABLE) && !state.isIn(ENDERMAN_BLACKLIST)) {
             Vec3d from = new Vec3d(enderman.getX() + 0.5, j + 0.5, enderman.getZ() + 0.5);
             Vec3d to   = new Vec3d(i + 0.5, j + 0.5, k + 0.5);
